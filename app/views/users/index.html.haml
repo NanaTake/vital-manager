@@ -1,4 +1,24 @@
-%header
-  Vital Manager
-%menu
+.wrapper
+  .header
+    .title-explain
+      .title-explain__title Vital Manager
+      .title-explain__explain 体重・血圧・脈拍を記録出来る健康管理アプリ
+    .btn-signout
+      = link_to "destroy_user_session_path, method: :delete, class: 'btn'" do
+        .main-header__edit-btn
+          ログアウト
+
+  .menu
+    %div.new-record
+      = link_to "new_vital_path(current_user.id)" do
+        = fa_icon 'pencil-square-o', class: 'icon'
+        .new-record__write 新規データ作成
+    %div.show-weekrecord
+      = link_to "index_vital_path(current_user.id)" do
+        = fa_icon 'pencil-square-o', class: 'icon'
+        .show-weekrecord__write 最近のデータ
+    %div.show-monthrecord
+      = link_to "show_vital_path(current_user.id)" do
+        = fa_icon 'pencil-square-o', class: 'icon'
+        .show-monthrecord__write 30日間のデータ
   
