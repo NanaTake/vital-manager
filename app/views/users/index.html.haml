@@ -3,12 +3,19 @@
     .index-header__title-explain
       .index-header__title-explain__title Vital Manager
       .index-header__title-explain__explain 体重・血圧・脈拍を記録出来る健康管理アプリ
-    .index-header__btn-signout
-      = link_to "destroy_user_session_path, method: :delete", class: 'signout-btn' do
-        .index-header__btn-signout__btn
+    .index-header__btn
+      = link_to destroy_user_session_path, method: :delete, class: 'header-btn' do
+        .btn-name
           ログアウト
+    .index-header__btn
+      = link_to edit_user_path(current_user), class: 'header-btn' do
+        .btn-name
+          ユーザー編集
+    
 
   .index-menu
+    %div.user-name
+      = "#{current_user.name}  さん"
     %div.select-menu
       = link_to "new_vital_path(current_user.id)", class: 'btn' do
         = fa_icon 'pencil-square-o', class: 'icon'
