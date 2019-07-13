@@ -1,0 +1,26 @@
+.wrapper
+  .index-header
+    .index-header__title-explain
+      .index-header__title-explain__title Vital Manager
+      .index-header__title-explain__explain 体重・血圧・脈拍を記録出来る健康管理アプリ
+    .index-header__btn
+      = link_to destroy_user_session_path, method: :delete, class: 'header-btn' do
+        .btn-name
+          ログアウト
+    .index-header__btn
+      = link_to root_path, class: 'header-btn' do
+        .btn-name
+          トップに戻る
+    
+
+  .index-menu
+    %div.user-name
+      = "#{current_user.name}  さん"
+    .form
+    = form_for [@, @message], class: 'form__form-for' do |f|
+      = f.text_field :content, class: 'form__form-for__message', placeholder: '  type a message'
+      .form__form-for__mask
+        = f.label :image, class: 'form__form-for__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__form-for__submit'

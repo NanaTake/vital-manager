@@ -31,8 +31,11 @@ ActiveRecord::Schema.define(version: 20190713064334) do
     t.integer  "blood_pressure"
     t.integer  "pulse"
     t.string   "memo"
+    t.integer  "user_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.index ["user_id"], name: "index_vitals_on_user_id", using: :btree
   end
 
+  add_foreign_key "vitals", "users"
 end
