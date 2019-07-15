@@ -17,10 +17,24 @@
     %div.user-name
       = "#{current_user.name}  さん"
     .form
-    = form_for [@, @message], class: 'form__form-for' do |f|
-      = f.text_field :content, class: 'form__form-for__message', placeholder: '  type a message'
-      .form__form-for__mask
-        = f.label :image, class: 'form__form-for__mask__image' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__form-for__submit'
+      = form_for @vital, class: 'form__form-for' do |f|
+        .form__form-for__item
+          %label.control-label{ for: "" }計測日
+          = f.date_select :record_date, use_month_numbers: true, class: 'form__form-for__item__record_date'
+        .form__form-for__item
+          %label.control-label{ for: "" }体重
+          = f.number_field :weight,min:0,max:1000,step:4, class: 'form__form-for__item__integer'
+          %label.control-label-unit{ for: "" }  kg
+        .form__form-for__item
+          %label.control-label{ for: "" }血圧
+          = f.text_field :blood_pressure, class: 'form__form-for__item__integer', placeholder: '120/80'
+          %label.control-label-unit{ for: "" }  mmHg
+        .form__form-for__item
+          %label.control-label{ for: "" }脈拍
+          = f.number_field :pulse,min:0,max:1000,step:4, class: 'form__form-for__item__integer'
+          %label.control-label-unit{ for: "" }  bpm
+        .form__form-for__item
+          %label.control-label{ for: "" }メモ
+          = f.text_field :memo, class: 'form__form-for__item__memo', placeholder: 'この日の体調について一言'
+        .form__form-for__item
+          = f.submit '記録する', class: 'form__form-for__item__submit'

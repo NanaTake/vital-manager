@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20190713064334) do
   create_table "vitals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.date     "record_date",               null: false
     t.float    "weight",         limit: 24
-    t.integer  "blood_pressure"
+    t.string   "blood_pressure"
     t.integer  "pulse"
     t.string   "memo"
     t.integer  "user_id"
