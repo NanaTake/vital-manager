@@ -14,8 +14,10 @@
  *= require_self
  */
 
+ @import "./reset";
  @import "font-awesome";
  @import "./index";
+ @import "./form";
 
  html, body {
   font-family: 'TsukuARdGothic-Regular',sans-serif;

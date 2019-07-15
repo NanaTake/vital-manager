@@ -1,0 +1,40 @@
+.wrapper
+  .index-header
+    .index-header__title-explain
+      .index-header__title-explain__title Vital Manager
+      .index-header__title-explain__explain 体重・血圧・脈拍を記録出来る健康管理アプリ
+    .index-header__btn
+      = link_to destroy_user_session_path, method: :delete, class: 'header-btn' do
+        .btn-name
+          ログアウト
+    .index-header__btn
+      = link_to root_path, class: 'header-btn' do
+        .btn-name
+          トップに戻る
+    
+
+  .index-menu
+    %div.user-name
+      = "#{current_user.name}  さん"
+    .form
+      = form_for @vital, class: 'form__form-for' do |f|
+        .form__form-for__item
+          %label.control-label{ for: "" }計測日
+          = f.date_select :record_date, use_month_numbers: true, class: 'form__form-for__item__record_date'
+        .form__form-for__item
+          %label.control-label{ for: "" }体重
+          = f.number_field :weight,min:0,max:1000,step:4, class: 'form__form-for__item__integer'
+          %label.control-label-unit{ for: "" }  kg
+        .form__form-for__item
+          %label.control-label{ for: "" }血圧
+          = f.text_field :blood_pressure, class: 'form__form-for__item__integer', placeholder: '120/80'
+          %label.control-label-unit{ for: "" }  mmHg
+        .form__form-for__item
+          %label.control-label{ for: "" }脈拍
+          = f.number_field :pulse,min:0,max:1000,step:4, class: 'form__form-for__item__integer'
+          %label.control-label-unit{ for: "" }  bpm
+        .form__form-for__item
+          %label.control-label{ for: "" }メモ
+          = f.text_field :memo, class: 'form__form-for__item__memo', placeholder: 'この日の体調について一言'
+        .form__form-for__item
+          = f.submit '記録する', class: 'form__form-for__item__submit'
