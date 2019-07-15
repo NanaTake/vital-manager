@@ -1,0 +1,29 @@
+.wrapper
+  .index-header
+    .index-header__title-explain
+      .index-header__title-explain__title Vital Manager
+      .index-header__title-explain__explain 体重・血圧・脈拍を記録出来る健康管理アプリ
+    .index-header__btn
+      = link_to destroy_user_session_path, method: :delete, class: 'header-btn' do
+        .btn-name
+          ログアウト
+    .index-header__btn
+      = link_to root_path, class: 'header-btn' do
+        .btn-name
+          トップに戻る
+
+
+  .index-menu
+    %div.user-name
+      = "#{current_user.name}  さんの一週間分のバイタル"
+    .record
+      .record__unit
+        .record__unit__list 測定日
+        .record__unit__list 体重
+        .record__unit__list 血圧
+        .record__unit__list 脈拍
+        .record__unit__list_memo メモ     
+     
+      = render @vitals
+
+      = paginate @vitals

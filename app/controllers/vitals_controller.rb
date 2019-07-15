@@ -2,6 +2,7 @@ class VitalsController < ApplicationController
   before_action :set_user
   
   def index
+    @vitals = @user.vitals.page(params[:page]).per(7).order("record_date DESC")
   end
 
   def new
