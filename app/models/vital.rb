@@ -1,6 +1,6 @@
 class Vital < ApplicationRecord
   belongs_to :user
 
-  validates :date, presence: true
+  validates :record_date, presence: true
 
 end

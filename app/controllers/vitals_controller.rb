@@ -9,8 +9,13 @@ class VitalsController < ApplicationController
   end
 
   def create
-    @vital = Vital.new(vital_params)
-    binding.pry
+    @vital = Vital.new(record_date: Date.new(vital_params["record_date(1i)"]&.to_i, vital_params["record_date(2i)"]&.to_i, vital_params["record_date(3i)"]&.to_i),
+                       weight: vital_params[:weight],
+                       blood_pressure: vital_params[:blood_pressure],
+                       pulse: vital_params[:pulse],
+                       memo: vital_params[:memo],
+                       user_id: current_user.id
+                      )
     if @vital.save
       redirect_to root_path
     else
@@ -21,7 +26,7 @@ class VitalsController < ApplicationController
   private
 
   def vital_params
-    params.require(:vital).permit(Form::Vital::REGISTRABLE_ATTRIBUTES).merge(user_id: current_user.id)
+    params.require(:vital).permit(:record_date, :weight, :blood_pressure, :pulse, :memo).merge(user_id: current_user.id)
   end
 
   def set_user
