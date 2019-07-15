@@ -1,9 +1,66 @@
 .record {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  &__unit {
+    width: 800px;
+    height: 50px;
+    &__list {
+      width: 120px;
+      height: 50px;
+      background-color: #f5f5f5;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      line-height: 50px;
+      border: solid;
+      border-width: thin;
+      border-color: brown;
+      color: rgb(95, 25, 25);
+    }
+    &__list_memo {
+      width: 225px;
+      height: 50px;
+      background-color: whitesmoke;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 50px;
+      border: solid;
+      border-width: thin;
+      border-color: brown;
+      padding-left: 30px;
+      color: rgb(95, 25, 25);
+    }
+  }
   &__table {
-    &__list 測定日
-    &__list 体重
-    &__list 血圧
-    &__list 脈拍
-    &__list_memo メモ
+    width: 800px;
+    height: 50px;
+    &__list {
+      width: 120px;
+      height: 50px;
+      background-color: whitesmoke;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      line-height: 50px;
+      border: solid;
+      border-width: thin;
+      border-color: brown;
+      color: rgb(95, 25, 25);
+    }
+    &__list_memo {
+      width: 225px;
+      height: 50px;
+      background-color: whitesmoke;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 50px;
+      border: solid;
+      border-width: thin;
+      border-color: brown;
+      padding-left: 30px;
+      overflow: auto;
+      color: rgb(95, 25, 25);
+    }
   }
 }
