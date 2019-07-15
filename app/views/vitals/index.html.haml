@@ -15,17 +15,13 @@
 
   .index-menu
     %div.user-name
-      = "#{current_user.name}  さん"
-    %div.select-menu
-      = link_to new_vital_path, class: 'btn' do
-        = fa_icon 'pencil-square-o', class: 'icon'
-        .write 新規データ作成
-    %div.select-menu
-      = link_to vitals_path, class: 'btn' do
-        = fa_icon 'file-text-o', class: 'icon'
-        .write 最近のデータ
-    %div.select-menu
-      = link_to user_path(current_user.id), class: 'btn' do
-        = fa_icon 'files-o', class: 'icon'
-        .write 30日間のデータ
-  
+      = "#{current_user.name}  さんの一週間分のバイタル"
+    .record
+      .record__table
+        .record__unit__list 測定日
+        .record__unit__list 体重
+        .record__unit__list 血圧
+        .record__unit__list 脈拍
+        .record__unit__list_memo メモ
+      
+      = render @vitals
