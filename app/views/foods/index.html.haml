@@ -1,0 +1,37 @@
+.wrapper
+  .index-header
+    .index-header__title-explain
+      .index-header__title-explain__title Vital Manager
+      .index-header__title-explain__explain 体重・血圧・脈拍を記録出来る健康管理アプリ
+    .index-header__btn
+      = link_to destroy_user_session_path, method: :delete, class: 'header-btn' do
+        .btn-name
+          ログアウト
+    .index-header__btn
+      = link_to root_path, class: 'header-btn' do
+        .btn-name
+          トップに戻る
+    
+
+  .index-menu
+    %div.user-name
+      = "カロリーチェッカー"
+    .form_newfood
+      .form_newfood__name 新規登録をする
+      = form_for @food, class: 'form_newfood__form-for' do |f|
+        .form_newfood__form-for__item
+          %label.control-label{ for: "" }食品名
+          = f.text_field :name, class: 'form_newfood__form-for__item__name', placeholder: '(例)ローソンの鮭おにぎり'
+        .form_newfood__form-for__item
+          %label.control-label{ for: "" }摂取カロリー
+          = f.number_field :calorie, min:0, max:9999, step:1, class: 'form_newfood__form-for__item__calorie'
+          %label.control-label-unit{ for: "" }  kcal
+        .form_newfood__form-for__item
+          = f.submit '記録する', class: 'form_newfood__form-for__item__submit'
+
+    .form_searchfood
+      .form_searchfood__name 食品を検索する
+      = form_for @food, class: 'form_searchfood__form-for' do |f|
+        .form_searchfood__form-for__item
+          %label.control-label{ for: "" }食品名
+          = f.text_field :name, class: 'form_searchfood__form-for__item__name', placeholder: '(例)ローソンの鮭おにぎり'

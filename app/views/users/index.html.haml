@@ -29,6 +29,6 @@
         = fa_icon 'files-o', class: 'icon'
         .write 過去30件のデータ
     %div.select-menu
-      = link_to 'user_path(current_user.id)', class: 'btn', data:{turbolinks: :false} do
+      = link_to foods_path, class: 'btn', data:{turbolinks: :false} do
         = fa_icon 'cutlery', class: 'icon'
-        .write カロリー計算
+        .write カロリーチェッカー

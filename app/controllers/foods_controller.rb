@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   before_action :set_user
 
   def index
-    # @food = Food.new
+    @food = Food.new
   end
 
   def create
