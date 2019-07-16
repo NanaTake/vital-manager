@@ -16,6 +16,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = current_user
+    @vitals = @user.vitals.page(params[:page]).per(30).order("record_date DESC")
   end
 
   private
