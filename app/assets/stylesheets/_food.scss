@@ -1,1 +1,107 @@
 // food#index
+.wrapper {
+  .index-menu {
+    .form_newfood {
+      width: 500px;
+      height: 200px;
+      margin: 50px auto;
+      padding: 30px 0;
+      background-color: rgb(255, 227, 227);
+      border-radius: 20px;
+      &__name {
+        color: brown;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+      &__form-for {
+        &__item {
+          width: 500px;
+          height: 50px;
+          .control-label {
+            padding-left: 30px;
+            height: 50px;
+            color: brown;
+          }
+          &__name {
+            margin-left: 64px;
+            width: 300px;
+            padding: 0 5px;
+            border-radius: 5px;
+            border: solid;
+            border-width: thin;
+            border-color: rgb(166, 166, 166);
+            background-color: rgb(248, 248, 248);
+          }
+        }
+        &__item {
+          .control-label {
+          }
+          &__calorie {
+            margin-left: 16px;
+            padding: 0 5px;
+            width: 100px;
+            border-radius: 5px;
+            border: solid;
+            border-width: thin;
+            border-color: rgb(166, 166, 166);
+            background-color: rgb(248, 248, 248);
+          }
+          .control-label-unit {
+            width: 200px;
+            padding-left: 30px;
+            color: brown;
+          }
+        }
+        &__item {
+          &__submit {
+            box-sizing: content-box;
+            margin-left: 200px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 0 auto;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(255, 93, 93);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .form_searchfood {
+      width: 500px;
+      margin: 50px auto;
+      padding: 30px 0;
+      &__name {
+        color: brown;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+      &__form-for {
+        &__item {
+          width: 500px;
+          height: 50px;
+          .control-label {
+            padding-left: 30px;
+            height: 50px;
+            color: brown;
+          }
+          &__name {
+            margin-left: 64px;
+            width: 300px;
+            padding: 0 5px;
+            border-radius: 5px;
+            border: solid;
+            border-width: thin;
+            border-color: rgb(166, 166, 166);
+            background-color: rgb(248, 248, 248);
+          }
+        }
+      }
+    }
+    
+  }
+}
