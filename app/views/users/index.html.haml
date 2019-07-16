@@ -28,4 +28,7 @@
       = link_to user_path(current_user.id), class: 'btn' do
         = fa_icon 'files-o', class: 'icon'
         .write 過去30件のデータ
-  
+    %div.select-menu
+      = link_to 'user_path(current_user.id)', class: 'btn' do
+        = fa_icon 'cutlery', class: 'icon'
+        .write カロリー計算
