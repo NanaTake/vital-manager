@@ -119,7 +119,7 @@
           width: 700px;
           height: 30px;
           padding: 5px 50px;
-          border-bottom: thin solid rgb(185, 128, 105);
+          border-bottom: thin dotted rgb(185, 128, 105);
           &__name {
             display: inline-block;
             width: 400px;
@@ -127,7 +127,12 @@
           }
           &__calorie {
             display: inline-block;
-            width: 150px;
+            width: 70px;
+            line-height: 30px;
+          }
+          &__unit {
+            display: inline-block;
+            width: 80px;
             line-height: 30px;
           }
           &__add {
@@ -153,7 +158,39 @@
       color: brown;
       .label {
         text-align: center;
-
+      }
+      .food_add_space__dish {
+        display: block;
+        width: 700px;
+        height: 30px;
+        padding: 5px 50px;
+        border-bottom: thin dotted rgb(185, 128, 105);
+        &__name {
+          display: inline-block;
+          width: 400px;
+          line-height: 30px;
+        }
+        &__calorie {
+          display: inline-block;
+          width: 70px;
+          line-height: 30px;
+        }
+        &__unit {
+          display: inline-block;
+          width: 80px;
+          line-height: 30px;
+        }
+        &__remove {
+          display: inline-block;
+          width: 100px;
+          line-height: 30px;
+          border: none;
+          color: white;
+          font-size: 16px;
+          text-align: center;
+          background-color: rgb(93, 182, 255);
+          border-radius: 10px;
+        }
       }
     }
     #total_calorie {

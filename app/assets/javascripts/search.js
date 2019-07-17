@@ -5,7 +5,10 @@ $(document).on('turbolinks:load', function(){
                     ${datafromsearch.name}
                   </p>
                   <p class="food_add_space__dish__calorie">
-                    ${datafromsearch.calorie} kcal
+                    ${datafromsearch.calorie} 
+                  </p>
+                  <p class="food_add_space__dish__unit">
+                    kcal
                   </p>
                   <div class="food_add_space__dish__add" data-food-id="${datafromsearch.id}" data-food-name="${datafromsearch.name}" data-food-calorie="${datafromsearch.calorie}" >
                     チェック
@@ -24,6 +27,7 @@ $(document).on('turbolinks:load', function(){
   }
   
   $(document).on("keyup",".form_searchfood__form-for__item__name", function() {
+    $(".alert").empty();
     $("#search_result").empty();
     var input = $(".form_searchfood__form-for__item__name").val();
     if (input.length !== 0) {
