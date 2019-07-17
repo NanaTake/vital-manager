@@ -10,13 +10,7 @@ class VitalsController < ApplicationController
   end
 
   def create
-    @vital = Vital.new(record_date: Date.new(vital_params["record_date(1i)"]&.to_i, vital_params["record_date(2i)"]&.to_i, vital_params["record_date(3i)"]&.to_i),
-                       weight: vital_params[:weight],
-                       blood_pressure: vital_params[:blood_pressure],
-                       pulse: vital_params[:pulse],
-                       memo: vital_params[:memo],
-                       user_id: current_user.id
-                      )
+    @vital = Vital.new(vital_params)
     if @vital.save
       redirect_to root_path
     else
