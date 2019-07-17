@@ -1,0 +1,205 @@
+// food#index
+.wrapper {
+  .index-menu {
+    .alert {
+      width: 500px;
+      height: 25px;
+      margin: 20px auto 0;
+      color: crimson;
+      text-align: center;
+    }
+    .form_newfood {
+      width: 500px;
+      height: 200px;
+      margin: 50px auto;
+      padding: 30px 0;
+      background-color: rgb(255, 227, 227);
+      border-radius: 20px;
+      &__name {
+        color: brown;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+      &__form-for {
+        &__item {
+          width: 500px;
+          height: 50px;
+          .control-label {
+            padding-left: 30px;
+            height: 50px;
+            color: brown;
+          }
+          &__name {
+            margin-left: 64px;
+            width: 300px;
+            padding: 0 5px;
+            border-radius: 5px;
+            border: solid;
+            border-width: thin;
+            border-color: rgb(166, 166, 166);
+            background-color: rgb(248, 248, 248);
+          }
+        }
+        &__item {
+          .control-label {
+          }
+          &__calorie {
+            margin-left: 16px;
+            padding: 0 5px;
+            width: 100px;
+            border-radius: 5px;
+            border: solid;
+            border-width: thin;
+            border-color: rgb(166, 166, 166);
+            background-color: rgb(248, 248, 248);
+          }
+          .control-label-unit {
+            width: 200px;
+            padding-left: 30px;
+            color: brown;
+          }
+        }
+        &__item {
+          &__submit {
+            box-sizing: content-box;
+            margin-left: 200px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 0 auto;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(255, 93, 93);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .form_searchfood {
+      width: 800px;
+      margin: 50px auto;
+      padding: 30px 0;
+      background-color: rgb(255, 227, 227);
+      border-radius: 20px;
+      &__name {
+        color: brown;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+      &__form-for {
+        &__item {
+          width: 800px;
+          height: 50px;
+          .control-label {
+            padding-left: 180px;
+            height: 50px;
+            color: brown;
+          }
+          &__name {
+            margin-left: 64px;
+            width: 300px;
+            padding: 0 5px;
+            border-radius: 5px;
+            border: solid;
+            border-width: thin;
+            border-color: rgb(166, 166, 166);
+            background-color: rgb(248, 248, 248);
+          }
+        }
+      }
+      #search_result {
+        width: 800px;
+        padding-top: 30px;
+        color: brown;
+        .food_add_space__dish {
+          display: block;
+          width: 700px;
+          height: 30px;
+          padding: 5px 50px;
+          border-bottom: thin dotted rgb(185, 128, 105);
+          &__name {
+            display: inline-block;
+            width: 400px;
+            line-height: 30px;
+          }
+          &__calorie {
+            display: inline-block;
+            width: 70px;
+            line-height: 30px;
+          }
+          &__unit {
+            display: inline-block;
+            width: 80px;
+            line-height: 30px;
+          }
+          &__add {
+            display: inline-block;
+            width: 100px;
+            line-height: 30px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            background-color: rgb(255, 93, 93);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    #food_add_space {
+      width: 800px;
+      margin: 50px auto;
+      padding: 30px 0;
+      background-color: rgb(255, 227, 227);
+      border-radius: 20px;
+      color: brown;
+      .label {
+        text-align: center;
+      }
+      .food_add_space__dish {
+        display: block;
+        width: 700px;
+        height: 30px;
+        padding: 5px 50px;
+        border-bottom: thin dotted rgb(185, 128, 105);
+        &__name {
+          display: inline-block;
+          width: 400px;
+          line-height: 30px;
+        }
+        &__calorie {
+          display: inline-block;
+          width: 70px;
+          line-height: 30px;
+        }
+        &__unit {
+          display: inline-block;
+          width: 80px;
+          line-height: 30px;
+        }
+        &__remove {
+          display: inline-block;
+          width: 100px;
+          line-height: 30px;
+          border: none;
+          color: white;
+          font-size: 16px;
+          text-align: center;
+          background-color: rgb(93, 182, 255);
+          border-radius: 10px;
+        }
+      }
+    }
+    #total_calorie {
+      width: 800px;
+      height: 50px;
+      color: brown;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+}

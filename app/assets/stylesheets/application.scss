@@ -19,6 +19,7 @@
  @import "./index";
  @import "./form";
  @import "./record";
+ @import "./food";
 
  html, body {
   font-family: 'TsukuARdGothic-Regular',sans-serif;
@@ -26,4 +27,5 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: rgb(255, 242, 227);
   }
