@@ -14,6 +14,8 @@
     
 
   .index-menu
+    %div.alert
+      = flash[:alert]
     %div.user-name
       = "カロリーチェッカー"
     .form_newfood
@@ -35,5 +37,10 @@
         .form_searchfood__form-for__item
           %label.control-label{ for: "" }食品名
           = f.text_field :name, class: 'form_searchfood__form-for__item__name', placeholder: '(例)ローソンの鮭おにぎり'
-    
-    .search_result
+      
+      #search_result
+
+    #food_add_space
+      .label チェックした食品が表示されます
+
+    #total_calorie ここに合計カロリーが表示される予定
