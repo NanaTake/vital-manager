@@ -8,7 +8,10 @@ class FoodsController < ApplicationController
   def create
     @food = Food.new(food_params)
     if @food.save
-      redirect_to foods_path, alert: '登録成功しました'
+      respond_to do |format|
+        format.html { redirect_to foods_path, alert: '登録成功しました' }
+        format.json
+      end
     else
       render :index, alert: '登録に失敗しました'
     end
