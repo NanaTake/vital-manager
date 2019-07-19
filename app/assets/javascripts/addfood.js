@@ -21,13 +21,13 @@ $(document).on('turbolinks:load', function(){
   function calcPrice() {
     var price = [];
     $('.fortotal').each(function(){
-  　  //数値型に変換して変数に代入するよ
+      //数値型に変換して変数に代入する
       var number = parseInt($(this).text());
       //配列に入れる                
       price.push(number);
     });
     var price_total = 0;
-  　//for文で配列を回して合計を出す
+    //for文で配列を回して合計を出す
     for(var i = 0, len = price.length;i < len; i++){
       price_total += price[i];
     }
