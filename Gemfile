@@ -63,4 +63,4 @@ gem "font-awesome-rails"
 
 gem 'devise'
 
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
